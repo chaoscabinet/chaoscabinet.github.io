@@ -1,9 +1,100 @@
+<!DOCTYPE html>
 <html>
- 
-<body>
-  <h1>The Chaos Cabinet</h1>
-  <p>We are The Chaos Cabinet! We are a system in the process of exploring ourselves. As part of that, we're trying to give ourselves spaces for self expression. This project is aimed at building and maintaining that kind of space.</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
- 
+    <head>
+        <link rel="stylesheet" href="mystyle.css">
+    </head>
+    <body>
+        <div class="sidenav">
+            <button class="dropdown-btn">2D Art
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#">Sketches</a>
+                <a href="#">Lineart</a>
+                <a href="#">Full Color</a>
+                <a href="#">Digital Art</a>
+                <a href="#">Automatic Drawings</a>
+            </div>
+            <button class="dropdown-btn">Fiber Crafts
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#">Crochet</a>
+                <a href="#">Knitting</a>
+                <a href="#">Felting</a>
+                <a href="#">Tatting</a>
+                <a href="#">Embroidery</a>
+            </div>
+            <button class="dropdown-btn">Herbal Smoking/Tea Blends
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#">Mood Enhancing</a>
+                <a href="#">Theraputic</a>
+            </div>
+            <button class="dropdown-btn">Performance
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#">Vocals</a>
+                <a href="#">Instrumentals</a>
+                <a href="#">Theater</a>
+                <a href="#">Film</a>
+                <a href="#">Dance</a>
+            </div>
+            <button class="dropdown-btn">Photography
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#">Landscapes</a>
+                <a href="#">Portraits</a>
+            </div>
+            <button class="dropdown-btn">Sculpture
+            <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#">Wood</a>
+                <a href="#">Resin</a>
+                <a href="#">Wire</a>
+                <a href="#">Glass</a>
+            </div>
+            <button class="dropdown-btn">Spiritual Practices
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#">Mixed Media Rituals</a>
+                <a href="#">Sigils</a>
+                <a href="#">Spellwork</a>
+                <a href="#">Tarot</a>
+            </div>
+            <button class="dropdown-btn">Writing
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#">Poetry</a>
+                <a href="#">Prose</a>
+                <a href="#">Lyrics</a>
+            </div>
+        </div>
+        <h1>Chaos Cabinet Creations</h1>
+        <p>We are The Chaos Cabinet! We are a system in the process of exploring ourselves.
+        As part of that, we're trying to give ourselves spaces for self expression.
+        This project is aimed at building and maintaining that kind of space.</p>
+        <script>
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+            
+            for (i=0; i<dropdown.length; i++) {
+                dropdown[i].addEventListener("hover", function() {
+                    this.classlist.toggle("active");
+                    var dropdownContent = this.nextElementSibling;
+                    if (dropdownContent.style.display === "block") {
+                        dropdownContent.style.display = "none";
+                    } else {
+                        dropdownContent.style.display = "block";
+                    }
+                });
+            }
+        </script>
+    </body>
 </html>
